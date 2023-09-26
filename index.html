@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Kanbanboard</title>
+</head>
+
+<body class="board-app">
+<header class="board-app__header">
+    <div class="board-app__inner">
+        <h1>Kanban Board</h1>
+    </div>
+</header>
+<main class="board-app__main">
+    <div class="board-app__inner">
+        <section class="add-task">
+            <h2 class="visually-hidden">Add Task</h2>
+            <form aria-label="Task Adding Form" class="add-task__form">
+                <div class="add-task__input-wrapper">
+                    <label for="add-task">New Task</label>
+                    <input id="add-task" name="task-name" placeholder="Task name..." required type="text">
+                </div>
+                <button class="add-task__button button" type="submit">
+                    <svg fill="none" height="22" viewBox="0 0 22 22" width="22" xmlns="http://www.w3.org/2000/svg">
+                        <rect fill="white" height="14.6667" width="1.83333" x="10.0833" y="3.66663"/>
+                        <rect fill="white" height="14.6667" transform="rotate(90 18.3333 10.0833)" width="1.83333"
+                              x="18.3333"
+                              y="10.0833"/>
+                    </svg>
+                    <span>Add</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="taskboard">
+            <h2 class="visually-hidden">Your Tasks:</h2>
+            <article class="taskboard__group taskboard__group--backlog">
+                <h3 class="taskboard__group-heading taskboard__group-heading--backlog">Backlog</h3>
+                <div class="taskboard__list">
+                    <div class="taskboard__item task task--active">
+                        <div class="task__body">
+                            <p class="task__view">Title of the first task</p>
+                            <input class="task__input" type="text" value="Title of the first task">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="taskboard__item task">
+                        <div class="task__body">
+                            <p class="task__view">Implement User Authentication</p>
+                            <input class="task__input" type="text" value="Implement User Authentication">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="taskboard__item task">
+                        <div class="task__body">
+                            <p class="task__view">Configure Firewall Rules</p>
+                            <input class="task__input" type="text" value="Configure Firewall Rules">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="taskboard__item task">
+                        <div class="task__body">
+                            <p class="task__view">Design New Company Logo</p>
+                            <input class="task__input" type="text" value="Design New Company Logo">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="taskboard__item task">
+                        <div class="task__body">
+                            <p class="task__view">Optimize Database Queries</p>
+                            <input class="task__input" type="text" value="Optimize Database Queries">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="taskboard__group taskboard__group--processing">
+                <h3 class="taskboard__group-heading taskboard__group-heading--processing">In Progress</h3>
+                <div class="taskboard__list taskboard__list--sorted">
+                    <div class="taskboard__item task task--processing task--active">
+                        <div class="task__body">
+                            <p class="task__view">Set Up VPN for Remote Workers</p>
+                            <input class="task__input" type="text" value="Set Up VPN for Remote Workers">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="taskboard__item task task--processing">
+                        <div class="task__body">
+                            <p class="task__view">Create UI/UX for Mobile App</p>
+                            <input class="task__input" type="text" value="Create UI/UX for Mobile App">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="taskboard__item task task--processing">
+                        <div class="task__body">
+                            <p class="task__view">Refactor Legacy Code</p>
+                            <input class="task__input" type="text" value="Refactor Legacy Code">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="taskboard__item task task--processing">
+                        <div class="task__body">
+                            <p class="task__view">Monitor Network Traffic</p>
+                            <input class="task__input" type="text" value="Monitor Network Traffic">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="taskboard__group taskboard__group--done">
+                <h3 class="taskboard__group-heading taskboard__group-heading--done">Done</h3>
+                <div class="taskboard__list taskboard__list--sorted">
+                    <div class="taskboard__item task task--done task--active">
+                        <div class="task__body">
+                            <p class="task__view">Update Website Layout</p>
+                            <input class="task__input" type="text" value="Update Website Layout">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="taskboard__item task task--done">
+                        <div class="task__body">
+                            <p class="task__view">Daily Backup of Critical Data</p>
+                            <input class="task__input" type="text" value="Daily Backup of Critical Data">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="taskboard__group taskboard__group--basket">
+                <h3 class="taskboard__group-heading taskboard__group-heading--basket">Basket</h3>
+                <div class="taskboard__list taskboard__list--trash">
+                    <div class="taskboard__item task task--basket task--active">
+                        <div class="task__body">
+                            <p class="task__view">Conduct Security Audit</p>
+                            <input class="task__input" type="text" value="Conduct Security Audit">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="taskboard__item task task--basket">
+                        <div class="task__body">
+                            <p class="task__view">Sprint Planning Meeting</p>
+                            <input class="task__input" type="text" value="Sprint Planning Meeting">
+                        </div>
+                        <button aria-label="Edit" class="task__edit" type="button"></button>
+                    </div>
+                    <div class="task--empty task task--empty-trash">
+                        <p>Basket is empty</p>
+                    </div>
+                </div>
+                <button class="taskboard__button button button--clear" type="button">
+                    <svg fill="none" height="22" viewBox="0 0 22 22" width="22" xmlns="http://www.w3.org/2000/svg">
+                        <rect fill="white" height="14.6667" transform="rotate(45 15.5374 5.16638)" width="1.83333"
+                              x="15.5374"
+                              y="5.16638"/>
+                        <rect fill="white" height="14.6667" transform="rotate(135 16.8337 15.5372)" width="1.83333"
+                              x="16.8337"
+                              y="15.5372"/>
+                    </svg>
+                    <span>Clear</span>
+                </button>
+            </article>
+
+        </section>
+    </div>
+</main>
+<script src="js/index.js" type="module"></script>
+</body>
+</html>
