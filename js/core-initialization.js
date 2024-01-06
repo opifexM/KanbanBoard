@@ -5,7 +5,6 @@ import {
     addTaskEvents,
     applyEmptyTaskToAllLists,
     checkBasketList,
-    prepareHtmlCode,
 } from "./task-operation.js";
 
 function init() {
@@ -15,7 +14,6 @@ function init() {
     applyEmptyTaskToAllLists();
     checkBasketList();
     addTaskEvents();
-    prepareHtmlCode();
 }
 
 export default init;

@@ -19,10 +19,6 @@ function addTaskEvents() {
     clearBasketButton.addEventListener('click', clearBasketHandler)
 }
 
-function prepareHtmlCode() {
-    createTaskButton.disabled = true;
-}
-
 function addOptionForAllTasks() {
     const allTasks = document.querySelectorAll('.task');
     allTasks.forEach(divTask => {
@@ -187,5 +183,4 @@ export {
     applyEmptyTaskToAllLists,
     checkBasketList,
     addTaskEvents,
-    prepareHtmlCode
 }
